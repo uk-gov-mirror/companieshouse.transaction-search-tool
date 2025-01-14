@@ -55,4 +55,5 @@ security-check: dependency-check
 
 .PHONY: dependency-check
 dependency-check:
+	export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64
 	npm run dependency-check
