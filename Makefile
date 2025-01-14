@@ -54,4 +54,5 @@ init: npm-install
 security-check: dependency-check
 
 .PHONY: dependency-check
-dependency-check: npm run dependency-check
+dependency-check:
+	npm run dependency-check
