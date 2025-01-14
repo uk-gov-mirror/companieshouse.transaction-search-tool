@@ -1,4 +1,5 @@
 artifact_name := transaction-search-tool
+export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64
 
 .PHONY: build
 build: clean init submodules
@@ -55,5 +56,4 @@ security-check: dependency-check
 
 .PHONY: dependency-check
 dependency-check:
-	export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64
 	npm run dependency-check
