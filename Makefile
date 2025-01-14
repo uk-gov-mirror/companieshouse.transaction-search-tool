@@ -29,7 +29,7 @@ lint:
 	npm i lint
 
 .PHONY: sonar
-sonar: test
+sonar: test dependency-check
 	npm run analyse-code
 
 .PHONY: package
@@ -51,5 +51,7 @@ endif
 init: npm-install
 
 .PHONY: security-check
-security-check:
-	npm audit
+security-check: dependency-check
+
+.PHONY: dependency-check
+dependency-check: npm run dependency-check
